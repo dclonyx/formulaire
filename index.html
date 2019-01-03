@@ -8,28 +8,43 @@
     <title>Formulaire</title>
 </head>
 <body>
-    <div id="nom">
-        <input type="text">
-    </div>
-    <div id="prenom">
-        <input type="text">
-    </div>
-    <div id="dateDeNaissance">
-        <input type="date" name="" id="">
-    </div>
-    <div id="box">
-        <input type="checkbox" name="" id="">
-    </div>
-    <div id="email">
-        <input type="email" name="" id="">
-    </div>
-    <div id="message">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-    </div>
-    <div id="envoyer">
-        <button type="submit">Submit</button>
-    </div>
-
+    <form action="traitement.php" method="post">
+        <div>
+            <h1>Inscription</h1>
+        </div>
+        <div>
+            <input type="text" name="Nom" id="nom" placeholder="Nom" onkeypress="verifierCaracteres(event); return false;">
+        </div>
+        <div>
+            <input type="text"  name="Prenom" id="prenom" placeholder="Prenom" onkeypress="verifierCaracteres2(event); return false;">
+        </div>
+        <div>
+            Date de Naissance <br>
+            <input type="date" name="dateDeNaissance"  id="dateDeNaissance">
+        </div>
+        <div id="box">
+            <div>
+                <input type="radio" name="genre" value="Homme">
+                <label for="homme">Homme</label>
+            </div>
+            <div>
+                <input type="radio" name="genre" value="Femme">
+                <label for="Femme">Femme</label>
+            </div>
+        </div>
+        <div>
+            <input type="email" name="email" id="email" placeholder="Email">
+        </div>
+        <div>
+            <textarea id="texte" name="message" id="message" maxlength="255" cols="42.5" rows="6" placeholder="Message limité à 255 caractères"></textarea>
+            <div>
+                <!-- caractere restant -->
+            </div>
+        </div>
+        <div>
+            <button type="submit" id="envoyer">Envoyer</button>
+        </div>
+    </form>
     <script src="./script.js"></script>
 </body>
 </html>
